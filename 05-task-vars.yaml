@@ -7,7 +7,7 @@
   tasks:
   - name: print the information
     ansible.builtin.debug:
-      msg: "Hi, I am leanring {{COURSE}}, Duration is: {{DUARTION}}, Trainer is: {{TRAINER}}"
+      msg: "Hi, I am leanring {{COURSE}}, Duration is: {{DURATION}}, Trainer is: {{TRAINER}}"
 
   - name: print the information again
     vars: # task level variables overrides play level
