@@ -1,10 +1,10 @@
 # this script is written to know the preferences of the variables
 - name: variables to print
   hosts: web
-  vars:
-    COURSE: "DevOps with AWS from PLAY level"
-    DURATION: "120HRS"
-    TRAINER: "Sivakumar Reddy"
+  # vars:
+  #   COURSE: "DevOps with AWS from PLAY level"
+  #   DURATION: "120HRS"
+  #   TRAINER: "Sivakumar Reddy"
   # vars_prompt:
   # - name: COURSE
   #   prompt: Please enter the course name
