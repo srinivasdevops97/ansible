@@ -6,7 +6,7 @@
     TRAINER: "Sivakumar Reddy"
   vars_prompt:
   - name: COURSE
-    prompt: Please enter the couse name
+    prompt: Please enter the course name
     private: false # not confindential
   - name: DURATION
     prompt: please enter the duration
@@ -15,9 +15,9 @@
     prompt: please enter the trainer name
     private: false # not confidential
   tasks:
-  - name: print the information
-    COURSE: "DevOps with AWS from TASK level"
-    DURATION: "120HRS"
-    TRAINER: "Sivakumar Reddy"
-  ansible.builtin.debug:
-    msg: "Hi, I am learning {{COURSE}}, Duration is: {{DURATION}}, trainer is: {{TRAINER}}"
+    - name: print the information
+      COURSE: "DevOps with AWS from TASK level"
+      DURATION: "120HRS"
+      TRAINER: "Sivakumar Reddy"
+      ansible.builtin.debug:
+        msg: "Hi, I am learning {{COURSE}}, Duration is: {{DURATION}}, trainer is: {{TRAINER}}"
