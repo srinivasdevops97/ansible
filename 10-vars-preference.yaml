@@ -19,5 +19,5 @@
     COURSE: "DevOps with AWS from TASK level"
     DURATION: "120HRS"
     TRAINER: "Sivakumar Reddy"
-  ansible.builtni.debug:
+  ansible.builtin.debug:
     msg: "Hi, I am learning {{COURSE}}, Duration is: {{DURATION}}, trainer is: {{TRAINER}}"
