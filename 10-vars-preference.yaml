@@ -5,7 +5,7 @@
     COURSE: "DevOps with AWS from PLAY level"
     DURATION: "120HRS"
     TRAINER: "Sivakumar Reddy"
-  vars_prompt:
+  #vars_prompt:
   - name: COURSE
     prompt: Please enter the course name
     private: false # not confindential
