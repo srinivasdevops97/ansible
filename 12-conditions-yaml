@@ -7,12 +7,12 @@
   tasks:
   - name: print this if less than 10
     ansible.builtin.debug:
-      msg: "Given number {{ my_number }} is less than 10"
+      msg: "Given number {{ vars_prompt }} is less than 10"
     when: my_number | int < 10 # conditional expression
 
   - name: print this if greater than or equal to 10
     ansible.builtin.debug:
-      msg: "given numner {{ my_number }} greater than or equal to 10"
+      msg: "given number {{ vars_prompt }} greater than or equal to 10"
     when: my_number | int >= 10
     
     
