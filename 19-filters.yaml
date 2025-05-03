@@ -36,5 +36,5 @@
         name: "DevOps with AWS"
         duration: "120"
         trainer: "Sivekumar Reddy"
-    ansible.biultin.debug:
+    ansible.builtin.debug:
       msg: "{{ course | dict2item }}"
