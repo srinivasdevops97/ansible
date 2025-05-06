@@ -26,3 +26,8 @@
 
 # 1st preference is command line/Args
 # 2nd preference is task level
+# 3rd preference is files
+# 4th preference is prompt
+# 5th preference is play-level
+# 6th preference is inventory
+# 7th preference is Roles
