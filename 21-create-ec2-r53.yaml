@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-    subnet_id: "subnet-0351597a4ca706e37"
+    subnet_id: "subnet-0351597a4ca706e37" #replace with your subnet_id
     sg_id: "sg-094106cbffaf0c40b"
     ami_id: "ami-09c813fb71547fc4f"
   instances:
@@ -10,12 +10,13 @@
   - backend
   - frontend
   tasks:
-  - name: start an instance with a pubilc IP address
+  - name: create ec2 instance
     amazon.aws.ec2_instance:
       name: "{{ item }}"
+      vpc_subnet_id: "{{ subnet_id }}"
       instance_type: "t3.micro"
       security_group: "{{ sg_id }}"
       image_id: "{{ ami_id }}"
-      loop: "{{ instances }}"
-      register: ec2-instances
+    loop: "{{ instances }}"
+    register: ec2-instances
       
