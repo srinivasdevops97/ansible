@@ -5,10 +5,10 @@
     subnet_id: "subnet-0351597a4ca706e37" #replace with your subnet_id
     sg_id: "sg-094106cbffaf0c40b"
     ami_id: "ami-09c813fb71547fc4f"
-  instances:
-  - mysql
-  - backend
-  - frontend
+    instances:
+    - mysql
+    - backend
+    - frontend
   tasks:
   - name: create ec2 instance
     amazon.aws.ec2_instance:
