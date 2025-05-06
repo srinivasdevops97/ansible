@@ -9,6 +9,7 @@
     - mysql
     - backend
     - frontend
+    zone: srinivas.fun
   tasks:
   - name: create ec2 instance
     amazon.aws.ec2_instance:
@@ -23,4 +24,14 @@
   - name: print the output
     ansible.builtin.debug:
       msg: "{{ ec2_instances }}"
-      
+
+  - name: create r53 records
+    ansible.builtin.route53:
+      state: present
+      zone: "{{ zone }}" 
+      record: "{{ item.item }}.{{ zone }}" #ex->(mysql).(srinivas.fun)->(item.item).(zone)
+      type: A
+      ttl: 1
+      value: "{{ item.instance[0].private_ip_address }}"
+      wait: true
+      overwrite: true # overrides existing records
