@@ -6,7 +6,7 @@
     sg_id: "sg-094106cbffaf0c40b"
     ami_id: "ami-09c813fb71547fc4f"
     instances:
-    - mysqlllll
+    - mysql
     - backend
     - frontend
     zone: srinivas.fun
